@@ -15,7 +15,7 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {name: 172.67.49.184, server: 172.67.49.184, port: 2052, client-fingerprint: chrome, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: hla71485.hla71485.workers.dev}}}
+  - {name: 🇺🇸 b.dlzkfc.us.kg, server: 172.67.49.184, port: 443, client-fingerprint: randomized, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, tfo: false, skip-cert-verify: false, servername: b.dlzkfc.us.kg, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: b.dlzkfc.us.kg}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -31,7 +31,7 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     proxies:
-      - 172.67.49.184
+      - 🇺🇸 b.dlzkfc.us.kg
   - name: 📲 电报消息
     type: select
     proxies:
