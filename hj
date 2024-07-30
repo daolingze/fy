@@ -5,19 +5,17 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇭🇰 HK, server: 8.210.65.1, port: 2053, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, tfo: false, skip-cert-verify: true, servername: b.dlzkfc.us.kg, network: ws, ws-opts: {path: "/?proxyip=proxyip.aliyun.fxxk.dedyn.io", headers: {Host: b.dlzkfc.us.kg}}, udp: true}
-  - {name: 🇳🇱 NL, server: 146.70.175.106, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, tfo: false, skip-cert-verify: true, servername: b.dlzkfc.us.kg, network: ws, ws-opts: {path: "/?proxyip=proxyip.oracle.fxxk.dedyn.io", headers: {Host: b.dlzkfc.us.kg}}, udp: true}
-  - {name: 🇰🇷 KR, server: 203.252.131.108, port: 45039, type: vless, uuid: aa431449-3d14-433a-a29a-216af805fefe, tls: true, tfo: false, skip-cert-verify: true, servername: a.dlz.us.kg, network: ws, ws-opts: {path: "/?proxyip=proxyip.kr.fxxk.dedyn.io", headers: {Host: a.dlz.us.kg}}, udp: true}
-  - {name: dlz.hot20940.workers.dev, server: 172.64.140.112, port: 2052, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: dlz.hot20940.workers.dev}}, udp: true}
-  - {name: 🇺🇸 b.dlzkfc.us.kg, server: b.dlzkfc.us.kg, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, tfo: false, skip-cert-verify: true, servername: b.dlzkfc.us.kg, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: b.dlzkfc.us.kg}}, udp: true}
-  - {name: 🇺🇸 b.dlzkfc.us.kg 2, server: b.dlzkfc.us.kg, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, tfo: false, skip-cert-verify: true, servername: b.dlzkfc.us.kg, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: b.dlzkfc.us.kg}}, udp: true}
+  - {name: 🇭🇰 HK, server: 8.210.65.1, port: 2053, client-fingerprint: random, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, tfo: false, servername: b.dlzkfc.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?proxyip=proxyip.aliyun.fxxk.dedyn.io", headers: {Host: b.dlzkfc.us.kg}}}
+  - {name: 🇳🇱 NL, server: 146.70.175.106, port: 443, client-fingerprint: random, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, tfo: false, servername: b.dlzkfc.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?proxyip=proxyip.oracle.fxxk.dedyn.io", headers: {Host: b.dlzkfc.us.kg}}}
+  - {name: 🇰🇷 KR, server: 203.252.131.108, port: 45039, client-fingerprint: random, type: vless, uuid: aa431449-3d14-433a-a29a-216af805fefe, tls: true, tfo: false, servername: a.dlz.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?proxyip=proxyip.kr.fxxk.dedyn.io", headers: {Host: a.dlz.us.kg}}}
+  - {name: dlz.hot20940.workers.dev, server: 172.64.140.112, port: 2052, client-fingerprint: randomized, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: false, tfo: false, servername: dlz.hot20940.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: dlz.hot20940.workers.dev}}}
+  - {name: 🇺🇸 b.dlzkfc.us.kg, server: b.dlzkfc.us.kg, port: 443, client-fingerprint: randomized, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, tfo: false, servername: b.dlzkfc.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: b.dlzkfc.us.kg}}}
+  - {name: 🇺🇸 b.dlzkfc.us.kg 2, server: b.dlzkfc.us.kg, port: 443, client-fingerprint: randomized, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, tfo: false, servername: b.dlzkfc.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: b.dlzkfc.us.kg}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🔮 负载均衡
       - DIRECT
       - 🇭🇰 HK
       - 🇳🇱 NL
@@ -30,29 +28,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    proxies:
-      - 🇭🇰 HK
-      - 🇳🇱 NL
-      - 🇰🇷 KR
-      - dlz.hot20940.workers.dev
-      - 🇺🇸 b.dlzkfc.us.kg
-      - 🇺🇸 b.dlzkfc.us.kg 2
-  - name: 🔯 故障转移
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 180
-    proxies:
-      - 🇭🇰 HK
-      - 🇳🇱 NL
-      - 🇰🇷 KR
-      - dlz.hot20940.workers.dev
-      - 🇺🇸 b.dlzkfc.us.kg
-      - 🇺🇸 b.dlzkfc.us.kg 2
-  - name: 🔮 负载均衡
-    type: load-balance
-    strategy: consistent-hashing
-    url: http://www.gstatic.com/generate_204
-    interval: 180
     proxies:
       - 🇭🇰 HK
       - 🇳🇱 NL
@@ -77,8 +52,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🔮 负载均衡
       - 🇭🇰 HK
       - 🇳🇱 NL
       - 🇰🇷 KR
