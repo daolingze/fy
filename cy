@@ -1,57 +1,20 @@
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
-log-level: info
-external-controller: :9090
-dns:
-  enabled: true
-  nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
-  fallback:
-    - 8.8.8.8
-    - 8.8.4.4
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
-proxies:
-  - {name: admin, server: 173.245.49.0, port: 443, client-fingerprint: randomized, type: vless, uuid: aa431449-3d14-433a-a29a-216af805fefe, tls: true, tfo: false, skip-cert-verify: false, servername: a.dlz.us.kg, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: a.dlz.us.kg}}}
-proxy-groups:
-  - name: 代理
-    type: select
-    proxies:
-      - admin
-  - name: 规则外路由选择
-    type: select
-    proxies:
-      - 代理
-      - DIRECT
-rules:
-  - DOMAIN-SUFFIX,local,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
-  - IP-CIDR6,::1/128,DIRECT,no-resolve
-  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
-  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
-  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
-  - PROCESS-NAME,aria2c,DIRECT
-  - PROCESS-NAME,fdm,DIRECT
-  - PROCESS-NAME,Folx,DIRECT
-  - PROCESS-NAME,NetTransport,DIRECT
-  - PROCESS-NAME,Thunder,DIRECT
-  - PROCESS-NAME,Transmission,DIRECT
-  - PROCESS-NAME,uTorrent,DIRECT
-  - PROCESS-NAME,WebTorrent,DIRECT
-  - PROCESS-NAME,WebTorrent Helper,DIRECT
-  - PROCESS-NAME,DownloadService,DIRECT
-  - PROCESS-NAME,Weiyun,DIRECT
-  - DOMAIN-KEYWORD,aria2,DIRECT
-  - DOMAIN-KEYWORD,xunlei,DIRECT
-  - DOMAIN-KEYWORD,yunpan,DIRECT
-  - DOMAIN-KEYWORD,Thunder,DIRECT
-  - DOMAIN-KEYWORD,XLLiveUD,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,规则外路由选择
+{"log":{"disabled":false,"level":"info","timestamp":true},"dns":{"servers":[{"tag":"dns_proxy","address":"tls://1.1.1.1","address_resolver":"dns_resolver"},{"tag":"dns_direct","address":"h3://dns.alidns.com/dns-query","address_resolver":"dns_resolver","detour":"DIRECT"},{"tag":"dns_fakeip","address":"fakeip"},{"tag":"dns_resolver","address":"223.5.5.5","detour":"DIRECT"},{"tag":"block","address":"rcode://success"}],"rules":[{"outbound":["any"],"server":"dns_resolver"},{"geosite":["category-ads-all"],"server":"dns_block","disable_cache":true},{"geosite":["geolocation-!cn"],"query_type":["A","AAAA"],"server":"dns_fakeip"},{"geosite":["geolocation-!cn"],"server":"dns_proxy"}],"final":"dns_direct","independent_cache":true,"fakeip":{"enabled":true,"inet4_range":"198.18.0.0/15"}},"ntp":{"enabled":true,"server":"time.apple.com","server_port":123,"interval":"30m","detour":"DIRECT"},"inbounds":[{"type":"mixed","tag":"mixed-in","listen":"0.0.0.0","listen_port":2080},{"type":"tun","tag":"tun-in","inet4_address":"172.19.0.1/30","auto_route":true,"strict_route":true,"stack":"mixed","sniff":true}],"outbounds":[{"type":"direct","tag":"DIRECT"},{"type":"block","tag":"REJECT"},{"type":"dns","tag":"dns-out"},
+
+{"type":"vless",
+"tag":"admin",
+"server":"173.245.49.0",
+"server_port":443,
+"uuid":"aa431449-3d14-433a-a29a-216af805fefe",
+"transport":{"path":"/?ed=2560","type":"ws","headers":{"Host":"a.dlz.us.kg"}},
+"tls":{"enabled":true,
+"server_name":"a.dlz.us.kg",
+"insecure":false},"network":"tcp","tcp_fast_open":false},
+{"type":"selector",
+"tag":"代理",
+"outbounds":["admin"]},
+{"type":"selector","tag":"规则外路由选择","outbounds":["代理","DIRECT"]},
+{"type":"selector",
+"tag":"GLOBAL",
+"outbounds":["DIRECT","admin"]}],
+
+"route":{"rules":[{"clash_mode":"Global","outbound":"GLOBAL"},{"clash_mode":"Direct","outbound":"DIRECT"},{"protocol":"dns","outbound":"dns-out"},{"domain_suffix":["local"],"ip_cidr":["192.168.0.0/16","10.0.0.0/8","172.16.0.0/12","127.0.0.0/8","100.64.0.0/10"],"outbound":"DIRECT"},{"process_name":["aria2c","fdm","folx","nettransport","thunder","transmission","utorrent","webtorrent","webtorrent helper","downloadservice","weiyun"],"domain_keyword":["aria2","xunlei","yunpan","thunder","xlliveud"],"outbound":"DIRECT"},{"geoip":"cn","outbound":"DIRECT"}],"auto_detect_interface":true,"final":"规则外路由选择"},"experimental":{"cache_file":{"enabled":true,"store_fakeip":true},"clash_api":{"external_controller":"127.0.0.1:9090","external_ui":"dashboard"}}}
