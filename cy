@@ -15,12 +15,12 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {name: a, server: 173.245.49.0, port: 443, client-fingerprint: randomized, type: vless, uuid: aa431449-3d14-433a-a29a-216af805fefe, tls: true, tfo: false, skip-cert-verify: false, servername: a.dlz.us.kg, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: a.dlz.us.kg}}}
+  - {name: admin, server: 173.245.49.0, port: 443, client-fingerprint: randomized, type: vless, uuid: aa431449-3d14-433a-a29a-216af805fefe, tls: true, tfo: false, skip-cert-verify: false, servername: a.dlz.us.kg, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: a.dlz.us.kg}}}
 proxy-groups:
   - name: 代理
     type: select
     proxies:
-      - a
+      - admin
   - name: 规则外路由选择
     type: select
     proxies:
