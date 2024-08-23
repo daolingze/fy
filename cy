@@ -1,209 +1,89 @@
-{
-  "log": {
-    "level": "info",
-    "timestamp": true
-  },
-  "dns": {
-    "servers": [
-      {
-        "tag": "dns_proxy",
-        "address": "tls://1.1.1.1",
-        "address_resolver": "dns_resolver"
-      },
-      {
-        "tag": "dns_direct",
-        "address": "h3://dns.alidns.com/dns-query",
-        "address_resolver": "dns_resolver",
-        "detour": "DIRECT"
-      },
-      {
-        "tag": "dns_fakeip",
-        "address": "fakeip"
-      },
-      {
-        "tag": "dns_resolver",
-        "address": "223.5.5.5",
-        "detour": "DIRECT"
-      },
-      {
-        "tag": "block",
-        "address": "rcode://success"
-      }
-    ],
-    "rules": [
-      {
-        "outbound": "any",
-        "server": "dns_resolver"
-      },
-      {
-        "geosite": "category-ads-all",
-        "server": "dns_block",
-        "disable_cache": true
-      },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "geosite": "geolocation-!cn",
-        "server": "dns_fakeip"
-      },
-      {
-        "geosite": "geolocation-!cn",
-        "server": "dns_proxy"
-      }
-    ],
-    "final": "dns_direct",
-    "fakeip": {
-      "enabled": true,
-      "inet4_range": "198.18.0.0/15"
-    },
-    "independent_cache": true
-  },
-  "ntp": {
-    "enabled": true,
-    "interval": "30m0s",
-    "server": "time.apple.com",
-    "server_port": 123,
-    "detour": "DIRECT"
-  },
-  "inbounds": [
-    {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "0.0.0.0",
-      "listen_port": 2080
-    },
-    {
-      "type": "tun",
-      "tag": "tun-in",
-      "inet4_address": "172.19.0.1/30",
-      "auto_route": true,
-      "strict_route": true,
-      "stack": "mixed",
-      "sniff": true
-    }
-  ],
-  "outbounds": [
-    {
-      "type": "direct",
-      "tag": "DIRECT"
-    },
-    {
-      "type": "block",
-      "tag": "REJECT"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
-    },
-    {
-      "type": "vless",
-      "tag": "admin",
-      "server": "47.242.157.96",
-      "server_port": 2096,
-      "uuid": "6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0",
-      "network": "tcp",
-      "tls": {
-        "enabled": true,
-        "server_name": "hk-cm.jdh.us.kg"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2048",
-        "headers": {
-          "Host": "hk-cm.jdh.us.kg"
-        }
-      }
-    },
-    {
-      "type": "selector",
-      "tag": "代理",
-      "outbounds": [
-        "admin"
-      ]
-    },
-    {
-      "type": "selector",
-      "tag": "规则外路由选择",
-      "outbounds": [
-        "代理",
-        "DIRECT"
-      ]
-    },
-    {
-      "type": "selector",
-      "tag": "GLOBAL",
-      "outbounds": [
-        "DIRECT",
-        "admin"
-      ]
-    }
-  ],
-  "route": {
-    "rules": [
-      {
-        "clash_mode": "Global",
-        "outbound": "GLOBAL"
-      },
-      {
-        "clash_mode": "Direct",
-        "outbound": "DIRECT"
-      },
-      {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
-      {
-        "domain_suffix": "local",
-        "ip_cidr": [
-          "192.168.0.0/16",
-          "10.0.0.0/8",
-          "172.16.0.0/12",
-          "127.0.0.0/8",
-          "100.64.0.0/10"
-        ],
-        "outbound": "DIRECT"
-      },
-      {
-        "domain_keyword": [
-          "aria2",
-          "xunlei",
-          "yunpan",
-          "thunder",
-          "xlliveud"
-        ],
-        "process_name": [
-          "aria2c",
-          "fdm",
-          "folx",
-          "nettransport",
-          "thunder",
-          "transmission",
-          "utorrent",
-          "webtorrent",
-          "webtorrent helper",
-          "downloadservice",
-          "weiyun"
-        ],
-        "outbound": "DIRECT"
-      },
-      {
-        "geoip": "cn",
-        "outbound": "DIRECT"
-      }
-    ],
-    "final": "规则外路由选择",
-    "auto_detect_interface": true
-  },
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "store_fakeip": true
-    },
-    "clash_api": {
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "dashboard"
-    }
-  }
-}
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+proxies:
+  - {name: 🇸🇬 sg, server: sg-detour-03.grabgo.pro, port: 15303, client-fingerprint: chrome, type: vmess, uuid: 0b9232cd-d901-4f16-9b51-05bfa3b59bd7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
+proxy-groups:
+  - name: 🧭Final
+    type: select
+    proxies:
+      - 🌑Proxy
+      - 🌐Direct
+  - name: 🌑Proxy
+    type: select
+    proxies:
+      - 🧯Fallback
+      - 🕹AutoTest
+      - 🇸🇬 sg
+  - name: 🎞Streaming
+    type: select
+    proxies:
+      - 🌑Proxy
+      - 🕹AutoTest
+      - 🇸🇬 sg
+  - name: 🎞StreamingSE
+    type: select
+    proxies:
+      - 🌐Direct
+      - 🇸🇬 sg
+  - name: 🛡Guard
+    type: select
+    proxies:
+      - ⛔️Reject
+      - 🌐Direct
+  - name: 🧯Fallback
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇸🇬 sg
+  - name: 🕹AutoTest
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇸🇬 sg
+  - name: ⛔️Reject
+    type: select
+    proxies:
+      - REJECT
+  - name: 🌐Direct
+    type: select
+    proxies:
+      - DIRECT
+rules:
+  - PROCESS-NAME,v2ray,DIRECT,DIRECT
+  - PROCESS-NAME,ss-local,DIRECT,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT,DIRECT
+  - PROCESS-NAME,fdm,DIRECT,DIRECT
+  - PROCESS-NAME,Folx,DIRECT,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT,DIRECT
+  - PROCESS-NAME,Thunder,DIRECT,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT,DIRECT
+  - PROCESS-NAME,WebTorrent Helper,DIRECT,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  - MATCH,,🧭Final,dns-failed
