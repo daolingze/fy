@@ -7,10 +7,39 @@ doh-server = https://doh.pub/dns-query
 
 [Proxy]
 🇸🇬 SG 新加坡 06  = ss, svip.365ip.cloud, 22006, encrypt-method=aes-256-gcm, password=d1091c99-fff8-4849-ba77-32a22e229b60, udp-relay=false
+
 日本03 = vmess, r2.xinyo.me, 40703, username=351c95f3-d64e-40ee-9121-41c4bf825a78, ws=false, tls=false, ws-path=/, skip-cert-verify=false, udp-relay=false, vmess-aead=true
+
 sg = vmess, sg-detour-03.grabgo.pro, 15303, username=0b9232cd-d901-4f16-9b51-05bfa3b59bd7, ws=false, tls=false, ws-path=/, skip-cert-verify=false, udp-relay=false, vmess-aead=true
+
+A104.19.140.43:8443 = trojan, 104.19.140.43, 8443, password=qwe, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t2.dlz.us.kg, sni=t2.dlz.us.kg
+
+B104.21.237.30:443 = trojan, 104.21.237.30, 443, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
+C104.21.232.118:2083 = trojan, 104.21.232.118, 2083, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
+D104.19.140.43:2096 = trojan, 104.19.140.43, 2096, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
+E172.64.204.60:2087 = trojan, 172.64.204.60, 2087, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
+F47.128.255.240:443 = trojan, 47.128.255.240, 443, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
+443 = trojan, 104.21.238.166, 443, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
+8443 = trojan, 104.21.238.166, 8443, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
+2053 = trojan, 104.21.238.166, 2053, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
+2083 = trojan, 104.21.238.166, 2083, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
+2087 = trojan, 104.21.238.166, 2087, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
+2096 = trojan, 104.21.238.166, 2096, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+
 [Proxy Group]
-SelectGroup = select, 🇸🇬 SG 新加坡 06 , 日本03,sg
+SelectGroup = select, 🇸🇬 SG 新加坡 06 , 日本03,sg,A104.19.140.43:8443 ,B104.21.237.30:443 ,C104.21.232.118:2083 ,D104.19.140.43:2096,E172.64.204.60:2087,F47.128.255.240:443, 443, 8443, 2053, 2083, 2087, 2096
+
+
 
 [Rule]
 # Apple
