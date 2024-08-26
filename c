@@ -22,7 +22,7 @@ D104.19.140.43:2096 = trojan, 104.19.140.43, 2096, password=123456, ws=true, ws-
 
 E172.64.204.60:2087 = trojan, 172.64.204.60, 2087, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
 
-F47.128.255.240:443 = trojan, 47.128.255.240, 443, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
+F = trojan, 47.76.77.103, 8443, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
 
 443 = trojan, 104.21.238.166, 443, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
 
@@ -37,7 +37,7 @@ F47.128.255.240:443 = trojan, 47.128.255.240, 443, password=123456, ws=true, ws-
 2096 = trojan, 104.21.238.166, 2096, password=123456, ws=true, ws-path=/?ed=2560, skip-cert-verify=false, udp-relay=false, ws-headers=Host:t.dlz.us.kg, sni=t.dlz.us.kg
 
 [Proxy Group]
-SelectGroup = select, 🇸🇬 SG 新加坡 06 , 日本03,sg,A104.19.140.43:8443 ,B104.21.237.30:443 ,C104.21.232.118:2083 ,D104.19.140.43:2096,E172.64.204.60:2087,F47.128.255.240:443, 443, 8443, 2053, 2083, 2087, 2096
+SelectGroup = select, 🇸🇬 SG 新加坡 06 , 日本03,sg,A104.19.140.43:8443 ,B104.21.237.30:443 ,C104.21.232.118:2083 ,D104.19.140.43:2096,E172.64.204.60:2087,F, 443, 8443, 2053, 2083, 2087, 2096
 
 
 
