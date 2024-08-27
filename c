@@ -1,4 +1,4 @@
-#!MANAGED-CONFIG  interval=86400 strict=false
+#!MANAGED-CONFIG https://raw.githubusercontent.com/daolingze/fy/main/c interval=86400 strict=false
 [General]
 skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
 dns-server = 114.114.114.114, 223.5.5.5, system
