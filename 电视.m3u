@@ -1,0 +1,65 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-name="凤凰资讯" group-title="YouTube「P」",凤凰资讯
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV22.m3u8
+
+#EXTINF:-1 tvg-name="天才冲冲冲" group-title="YouTube「P」",天才冲冲冲「综艺」
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV26.m3u8
+
+#EXTINF:-1 tvg-name="中天新闻" group-title="YouTube「P」",中天新闻
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV28.m3u8
+
+#EXTINF:-1 group-title="YouTube「P」",Tokyo Shibuya「东京涩谷」
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV29.m3u8
+
+#EXTINF:-1 group-title="YouTube「P」",猪哥会社「综艺」
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV73.m3u8
+
+#EXTINF:-1 group-title="YouTube「P」",公主小妹「台剧」
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV74.m3u8
+
+#EXTINF:-1 tvg-name="三立INEWS" group-title="YouTube「P」",三立INEWS
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV01.m3u8
+
+#EXTINF:-1 tvg-name="寰宇新闻" group-title="YouTube「P」",寰宇新闻
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV02.m3u8
+
+#EXTINF:-1 tvg-name="东森财经新闻" group-title="YouTube「P」",东森财经新闻
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV03.m3u8
+
+#EXTINF:-1 tvg-name="中视新闻" group-title="YouTube「P」",中视新闻
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV09.m3u8
+
+#EXTINF:-1 group-title="YouTube「P」",警世剧场「台剧」
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV12.m3u8
+
+#EXTINF:-1 tvg-name="民视新闻" group-title="YouTube「P」",民视新闻
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV17.m3u8
+
+#EXTINF:-1 tvg-name="新唐人亚太" group-title="YouTube「P」",新唐人亚太「纪录」
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV23.m3u8
+
+#EXTINF:-1 tvg-name="台视新闻" group-title="YouTube「P」",台视新闻
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV25.m3u8
+
+#EXTINF:-1 tvg-name="大爱" group-title="YouTube「P」",大爱
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV30.m3u8
+
+#EXTINF:-1 tvg-name="TVBS网路新闻" group-title="YouTube「P」",TVBS网路新闻
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV31.m3u8
+
+#EXTINF:-1 tvg-name="三立NEWS+" group-title="YouTube「P」",三立NEWS+
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV32.m3u8
+
+#EXTINF:-1 tvg-name="CBNNEWS" group-title="YouTube「P」",CBN NEWS
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV33.m3u8
+
+#EXTINF:-1 group-title="YouTube「P」",欢喜玉玲珑「台剧」
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV34.m3u8
+
+
+
+
+
+
+
