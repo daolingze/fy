@@ -21,12 +21,6 @@ proxies:
   - {name: 2083-IPV4-tls, server: www.visakorea.com, port: 2083, client-fingerprint: chrome, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: us.kg, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.kg}}}
   - {name: 2087-IPV4-tls, server: www.visakorea.com, port: 2087, client-fingerprint: chrome, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: us.kg, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.kg}}}
   - {name: 2096-IPV4-tls, server: www.visakorea.com, port: 2096, client-fingerprint: chrome, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: us.kg, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.kg}}}
-  - {name: 443-IPV4-T, server: whatismyipaddress.com, port: 443, client-fingerprint: random, type: trojan, password: 123456, sni: t.dlz.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: t.dlz.us.kg}}}
-  - {name: 8443-IPV4-T, server: whatismyipaddress.com, port: 8443, client-fingerprint: random, type: trojan, password: 123456, sni: t.dlz.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: t.dlz.us.kg}}}
-  - {name: 2053-IPV4-T, server: whatismyipaddress.com, port: 2053, client-fingerprint: random, type: trojan, password: 123456, sni: t.dlz.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: t.dlz.us.kg}}}
-  - {name: 2083-IPV4-T, server: whatismyipaddress.com, port: 2083, client-fingerprint: random, type: trojan, password: 123456, sni: t.dlz.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: t.dlz.us.kg}}}
-  - {name: 2087-IPV4-T, server: whatismyipaddress.com, port: 2087, client-fingerprint: random, type: trojan, password: 123456, sni: t.dlz.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: t.dlz.us.kg}}}
-  - {name: 2096-IPV4-T, server: whatismyipaddress.com, port: 2096, client-fingerprint: random, type: trojan, password: 123456, sni: t.dlz.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: t.dlz.us.kg}}}
 proxy-groups:
   - name: 代理
     type: select
@@ -37,12 +31,6 @@ proxy-groups:
       - 2083-IPV4-tls
       - 2087-IPV4-tls
       - 2096-IPV4-tls
-      - 443-IPV4-T
-      - 8443-IPV4-T
-      - 2053-IPV4-T
-      - 2083-IPV4-T
-      - 2087-IPV4-T
-      - 2096-IPV4-T
   - name: 规则外路由选择
     type: select
     proxies:
