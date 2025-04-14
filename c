@@ -15,10 +15,10 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {name: 2052, server: whatismyipaddress.com, port: 2052, client-fingerprint: random, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0,  tls: false, tfo: false, skip-cert-verify: false, servername: aly-cm.vlx99770.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: aly-cm.vlx99770.workers.dev}}}
-  - {name: 2082, server: whatismyipaddress.com, port: 2082, client-fingerprint: random, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0,  tls: false, tfo: false, skip-cert-verify: false, servername: aly-cm.vlx99770.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: aly-cm.vlx99770.workers.dev}}}
-  - {name: 2086, server: whatismyipaddress.com, port: 2086, client-fingerprint: random, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0,  tls: false, tfo: false, skip-cert-verify: false, servername: aly-cm.vlx99770.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: aly-cm.vlx99770.workers.dev}}}
-  - {name: 2095, server: whatismyipaddress.com, port: 2095, client-fingerprint: random, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0,  tls: false, tfo: false, skip-cert-verify: false, servername: aly-cm.vlx99770.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: aly-cm.vlx99770.workers.dev}}}
+  - {name: 2052, server: whatismyipaddress.com, port: 2052, client-fingerprint: random, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0,  tls: false, tfo: false, skip-cert-verify: false, servername: hla71485.hla71485.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: hla71485.hla71485.workers.dev}}}
+  - {name: 2082, server: whatismyipaddress.com, port: 2082, client-fingerprint: random, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0,  tls: false, tfo: false, skip-cert-verify: false, servername: hla71485.hla71485.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: hla71485.hla71485.workers.dev}}}
+  - {name: 2086, server: whatismyipaddress.com, port: 2086, client-fingerprint: random, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0,  tls: false, tfo: false, skip-cert-verify: false, servername: hla71485.hla71485.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: hla71485.hla71485.workers.dev}}}
+  - {name: 2095, server: whatismyipaddress.com, port: 2095, client-fingerprint: random, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0,  tls: false, tfo: false, skip-cert-verify: false, servername: hla71485.hla71485.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: hla71485.hla71485.workers.dev}}}
 proxy-groups:
   - name: 代理
     type: select
