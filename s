@@ -1,139 +1,271 @@
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
-log-level: info
-external-controller: :9090
-dns:
-  enabled: true
-  nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
-  fallback:
-    - 8.8.8.8
-    - 8.8.4.4
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
-proxies:
-  - {name: 🇭🇰 香港443, server: whatismyipaddress.com, port: 443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: hk.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: hk.us.kg}}}
-  - {name: 🇭🇰 香港8443, server: whatismyipaddress.com, port: 8443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: hk.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: hk.us.kg}}}
-  - {name: 🇭🇰 香港2053, server: whatismyipaddress.com, port: 2053, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: hk.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: hk.us.kg}}}
-  - {name: 🇭🇰 香港2083, server: whatismyipaddress.com, port: 2083, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: hk.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: hk.us.kg}}}
-  - {name: 🇭🇰 香港2087, server: whatismyipaddress.com, port: 2087, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: hk.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: hk.us.kg}}}
-  - {name: 🇭🇰 香港2096, server: whatismyipaddress.com, port: 2096, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: hk.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: hk.us.kg}}}
-  - {name: 🇸🇬 新加坡443, server: whatismyipaddress.com, port: 443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: sg.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg.us.kg}}}
-  - {name: 🇸🇬 新加坡8443, server: whatismyipaddress.com, port: 8443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: sg.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg.us.kg}}}
-  - {name: 🇸🇬 新加坡2053, server: whatismyipaddress.com, port: 2053, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: sg.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg.us.kg}}}
-  - {name: 🇸🇬 新加坡2083, server: whatismyipaddress.com, port: 2083, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: sg.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg.us.kg}}}
-  - {name: 🇸🇬 新加坡2087, server: whatismyipaddress.com, port: 2087, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: sg.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg.us.kg}}}
-  - {name: 🇸🇬 新加坡2096, server: whatismyipaddress.com, port: 2096, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: sg.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg.us.kg}}}
-  - {name: 🇯🇵 日本443, server: whatismyipaddress.com, port: 443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jp.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jp.us.kg}}}
-  - {name: 🇯🇵 日本8443, server: whatismyipaddress.com, port: 8443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jp.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jp.us.kg}}}
-  - {name: 🇯🇵 日本2053, server: whatismyipaddress.com, port: 2053, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jp.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jp.us.kg}}}
-  - {name: 🇯🇵 日本2083, server: whatismyipaddress.com, port: 2083, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jp.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jp.us.kg}}}
-  - {name: 🇯🇵 日本2087, server: whatismyipaddress.com, port: 2087, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jp.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jp.us.kg}}}
-  - {name: 🇯🇵 日本2096, server: whatismyipaddress.com, port: 2096, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jp.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jp.us.kg}}}
-  - {name: 🇺🇸 美国443, server: whatismyipaddress.com, port: 443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: us.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: us.us.kg}}}
-  - {name: 🇺🇸 美国8443, server: whatismyipaddress.com, port: 8443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: us.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: us.us.kg}}}
-  - {name: 🇺🇸 美国2053, server: whatismyipaddress.com, port: 2053, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: us.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: us.us.kg}}}
-  - {name: 🇺🇸 美国2083, server: whatismyipaddress.com, port: 2083, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: us.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: us.us.kg}}}
-  - {name: 🇺🇸 美国2087, server: whatismyipaddress.com, port: 2087, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: us.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: us.us.kg}}}
-  - {name: 🇺🇸 美国2096, server: whatismyipaddress.com, port: 2096, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: us.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: us.us.kg}}}
-  - {name: 阿里云443, server: whatismyipaddress.com, port: 443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: aly.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: aly.us.kg}}}
-  - {name: 阿里云8443, server: whatismyipaddress.com, port: 8443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: aly.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: aly.us.kg}}}
-  - {name: 阿里云2053, server: whatismyipaddress.com, port: 2053, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: aly.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: aly.us.kg}}}
-  - {name: 阿里云2083, server: whatismyipaddress.com, port: 2083, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: aly.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: aly.us.kg}}}
-  - {name: 阿里云2087, server: whatismyipaddress.com, port: 2087, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: aly.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: aly.us.kg}}}
-  - {name: 阿里云2096, server: whatismyipaddress.com, port: 2096, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: aly.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: aly.us.kg}}}
-  - {name: 甲骨文443, server: whatismyipaddress.com, port: 443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jgw.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jgw.us.kg}}}
-  - {name: 甲骨文8443, server: whatismyipaddress.com, port: 8443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jgw.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jgw.us.kg}}}
-  - {name: 甲骨文2053, server: whatismyipaddress.com, port: 2053, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jgw.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jgw.us.kg}}}
-  - {name: 甲骨文2083, server: whatismyipaddress.com, port: 2083, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jgw.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jgw.us.kg}}}
-  - {name: 甲骨文2087, server: whatismyipaddress.com, port: 2087, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jgw.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jgw.us.kg}}}
-  - {name: 甲骨文2096, server: whatismyipaddress.com, port: 2096, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: jgw.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jgw.us.kg}}}
-  - {name: 数码海443, server: whatismyipaddress.com, port: 443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: smh.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: smh.us.kg}}}
-  - {name: 数码海8443, server: whatismyipaddress.com, port: 8443, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: smh.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: smh.us.kg}}}
-  - {name: 数码海2053, server: whatismyipaddress.com, port: 2053, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: smh.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: smh.us.kg}}}
-  - {name: 数码海2083, server: whatismyipaddress.com, port: 2083, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: smh.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: smh.us.kg}}}
-  - {name: 数码海2087, server: whatismyipaddress.com, port: 2087, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: smh.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: smh.us.kg}}}
-  - {name: 数码海2096, server: whatismyipaddress.com, port: 2096, client-fingerprint: randomized, type: vless, uuid: 99280094-e683-476b-a3cd-0d37c3892c6f, tls: true, tfo: false, skip-cert-verify: false, servername: smh.us.kg, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: smh.us.kg}}}
-proxy-groups:
-  - name: 代理
-    type: select
-    proxies:
-      - 🇭🇰 香港443
-      - 🇭🇰 香港8443
-      - 🇭🇰 香港2053
-      - 🇭🇰 香港2083
-      - 🇭🇰 香港2087
-      - 🇭🇰 香港2096
-      - 🇸🇬 新加坡443
-      - 🇸🇬 新加坡8443
-      - 🇸🇬 新加坡2053
-      - 🇸🇬 新加坡2083
-      - 🇸🇬 新加坡2087
-      - 🇸🇬 新加坡2096
-      - 🇯🇵 日本443
-      - 🇯🇵 日本8443
-      - 🇯🇵 日本2053
-      - 🇯🇵 日本2083
-      - 🇯🇵 日本2087
-      - 🇯🇵 日本2096
-      - 🇺🇸 美国443
-      - 🇺🇸 美国8443
-      - 🇺🇸 美国2053
-      - 🇺🇸 美国2083
-      - 🇺🇸 美国2087
-      - 🇺🇸 美国2096
-      - 阿里云443
-      - 阿里云8443
-      - 阿里云2053
-      - 阿里云2083
-      - 阿里云2087
-      - 阿里云2096
-      - 甲骨文443
-      - 甲骨文8443
-      - 甲骨文2053
-      - 甲骨文2083
-      - 甲骨文2087
-      - 甲骨文2096
-      - 数码海443
-      - 数码海8443
-      - 数码海2053
-      - 数码海2083
-      - 数码海2087
-      - 数码海2096
-  - name: 规则外路由选择
-    type: select
-    proxies:
-      - 代理
-      - DIRECT
-rules:
-  - DOMAIN-SUFFIX,local,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
-  - IP-CIDR6,::1/128,DIRECT,no-resolve
-  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
-  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
-  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
-  - PROCESS-NAME,aria2c,DIRECT
-  - PROCESS-NAME,fdm,DIRECT
-  - PROCESS-NAME,Folx,DIRECT
-  - PROCESS-NAME,NetTransport,DIRECT
-  - PROCESS-NAME,Thunder,DIRECT
-  - PROCESS-NAME,Transmission,DIRECT
-  - PROCESS-NAME,uTorrent,DIRECT
-  - PROCESS-NAME,WebTorrent,DIRECT
-  - PROCESS-NAME,WebTorrent Helper,DIRECT
-  - PROCESS-NAME,DownloadService,DIRECT
-  - PROCESS-NAME,Weiyun,DIRECT
-  - DOMAIN-KEYWORD,aria2,DIRECT
-  - DOMAIN-KEYWORD,xunlei,DIRECT
-  - DOMAIN-KEYWORD,yunpan,DIRECT
-  - DOMAIN-KEYWORD,Thunder,DIRECT
-  - DOMAIN-KEYWORD,XLLiveUD,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,规则外路由选择
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "",
+      "external_ui_download_detour": "",
+      "secret": "",
+      "default_mode": "Rule"
+    },
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxydns",
+        "address": "tls://8.8.8.8/dns-query",
+        "detour": "select"
+      },
+      {
+        "tag": "localdns",
+        "address": "h3://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_fakeip",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "localdns",
+        "disable_cache": true
+      },
+      {
+        "clash_mode": "Global",
+        "server": "proxydns"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "localdns"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "server": "localdns"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "proxydns"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "dns_fakeip"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "final": "proxydns"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30",
+        "fd00::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "prefer_ipv4"
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "default": "auto",
+      "outbounds": [
+        "auto",
+        "2052",
+        "2082",
+        "2086",
+        "2095"
+      ]
+    },
+    {
+      "server": "whatismyipaddress.com",
+      "server_port": 2052,
+      "tag": "2052",
+      "packet_encoding": "packetaddr",
+      "transport": {
+        "headers": {
+          "Host": [
+            "warpv2.wxq46983.workers.dev"
+          ]
+        },
+        "path": "/?ed=2560",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "cab4a70d-4dda-4e1c-94be-f8fc598007ce"
+    },
+    {
+      "server": "whatismyipaddress.com",
+      "server_port": 2082,
+      "tag": "2082",
+      "packet_encoding": "packetaddr",
+      "transport": {
+        "headers": {
+          "Host": [
+            "warpv2.wxq46983.workers.dev"
+          ]
+        },
+        "path": "/?ed=2560",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "cab4a70d-4dda-4e1c-94be-f8fc598007ce"
+    },
+    {
+      "server": "whatismyipaddress.com",
+      "server_port": 2086,
+      "tag": "2086",
+      "packet_encoding": "packetaddr",
+      "transport": {
+        "headers": {
+          "Host": [
+            "warpv2.wxq46983.workers.dev"
+          ]
+        },
+        "path": "/?ed=2560",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "cab4a70d-4dda-4e1c-94be-f8fc598007ce"
+    },
+    {
+      "server": "whatismyipaddress.com",
+      "server_port": 2095,
+      "tag": "2095",
+      "packet_encoding": "packetaddr",
+      "transport": {
+        "headers": {
+          "Host": [
+            "warpv2.wxq46983.workers.dev"
+          ]
+        },
+        "path": "/?ed=2560",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "cab4a70d-4dda-4e1c-94be-f8fc598007ce"
+    },
+   
+
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "2052",
+        "2082",
+        "2086",
+        "2095"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    }
+  ],
+  "route": {
+    "rule_set": [
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
+        "download_detour": "select",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-cn.srs",
+        "download_detour": "select",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
+        "download_detour": "select",
+        "update_interval": "1d"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "select",
+    "rules": [
+      {
+        "inbound": "tun-in",
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "port": 443,
+        "network": "udp",
+        "action": "reject"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "outbound": "select"
+      }
+    ]
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "direct"
+  }
+}
