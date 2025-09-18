@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 dns:
-  enabled: true
+  enable: true
   nameserver:
     - 119.29.29.29
     - 223.5.5.5
@@ -15,12 +15,108 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {name: 🇸🇬 sg, server: sg-detour-03.grabgo.pro, port: 15303, client-fingerprint: chrome, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
+  - {name: 🇮🇸 time.is, server: time.is, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.hugedomains.com, server: www.hugedomains.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: skk.moe, server: skk.moe, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.ipchicken.com, server: www.ipchicken.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: iplocation.io, server: iplocation.io, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.iplocation.net, server: www.iplocation.net, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: 🇸🇬 singapore.com, server: singapore.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.whoer.net, server: www.whoer.net, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: ip.sb, server: ip.sb, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: malaysia.com, server: malaysia.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: 🇯🇵 japan.com, server: japan.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: 🇷🇺 russia.com, server: russia.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.glassdoor.com, server: www.glassdoor.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.4chan.org, server: www.4chan.org, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.pcmag.com, server: www.pcmag.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.shopify.com, server: www.shopify.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: 🇸🇬 www.visa.com.sg, server: www.visa.com.sg, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: gur.gov.ua, server: gur.gov.ua, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.boba88slot.com, server: www.boba88slot.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: whatismyipaddress.com, server: whatismyipaddress.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: 🇭🇰 icook.hk, server: icook.hk, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.csgo.com, server: www.csgo.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.okcupid.com, server: www.okcupid.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: shopify.com, server: shopify.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.gov.ua, server: www.gov.ua, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: 🇹🇼 www.visa.com.tw, server: www.visa.com.tw, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: log.bpminecraft.com, server: log.bpminecraft.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: 🇰🇷 www.visakorea.com, server: www.visakorea.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: 🇭🇰 www.visa.com.hk, server: www.visa.com.hk, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: fbi.gov, server: fbi.gov, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.ipaddress.my, server: www.ipaddress.my, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: edtunnel-dgp.pages.dev, server: edtunnel-dgp.pages.dev, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.baipiao.eu.org, server: www.baipiao.eu.org, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: 🇯🇵 www.visa.co.jp, server: www.visa.co.jp, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.wto.org, server: www.wto.org, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.iakeys.com, server: www.iakeys.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.gov.se, server: www.gov.se, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.ipget.net, server: www.ipget.net, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: time.cloudflare.com, server: time.cloudflare.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.gco.gov.qa, server: www.gco.gov.qa, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.zsu.gov.ua, server: www.zsu.gov.ua, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: download.yunzhongzhuan.com, server: download.yunzhongzhuan.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: 🇹🇼 icook.tw, server: icook.tw, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.whatismyip.com, server: www.whatismyip.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.udacity.com, server: www.udacity.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.who.int, server: www.who.int, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.visa.com, server: www.visa.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.udemy.com, server: www.udemy.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
+  - {name: www.digitalocean.com, server: www.digitalocean.com, port: 2096, client-fingerprint: random, type: vless, uuid: 07a906dc-c420-3fe9-95ff-09dfdcc7efd3, tls: true, tfo: false, skip-cert-verify: false, servername: us.dlz.dpdns.org, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: us.dlz.dpdns.org}}}
 proxy-groups:
   - name: 代理
     type: select
     proxies:
-      - 🇸🇬 sg
+      - 🇮🇸 time.is
+      - www.hugedomains.com
+      - skk.moe
+      - www.ipchicken.com
+      - iplocation.io
+      - www.iplocation.net
+      - 🇸🇬 singapore.com
+      - www.whoer.net
+      - ip.sb
+      - malaysia.com
+      - 🇯🇵 japan.com
+      - 🇷🇺 russia.com
+      - www.glassdoor.com
+      - www.4chan.org
+      - www.pcmag.com
+      - www.shopify.com
+      - 🇸🇬 www.visa.com.sg
+      - gur.gov.ua
+      - www.boba88slot.com
+      - whatismyipaddress.com
+      - 🇭🇰 icook.hk
+      - www.csgo.com
+      - www.okcupid.com
+      - shopify.com
+      - www.gov.ua
+      - 🇹🇼 www.visa.com.tw
+      - log.bpminecraft.com
+      - 🇰🇷 www.visakorea.com
+      - 🇭🇰 www.visa.com.hk
+      - fbi.gov
+      - www.ipaddress.my
+      - edtunnel-dgp.pages.dev
+      - www.baipiao.eu.org
+      - 🇯🇵 www.visa.co.jp
+      - www.wto.org
+      - www.iakeys.com
+      - www.gov.se
+      - www.ipget.net
+      - time.cloudflare.com
+      - www.gco.gov.qa
+      - www.zsu.gov.ua
+      - download.yunzhongzhuan.com
+      - 🇹🇼 icook.tw
+      - www.whatismyip.com
+      - www.udacity.com
+      - www.who.int
+      - www.visa.com
+      - www.udemy.com
+      - www.digitalocean.com
   - name: 规则外路由选择
     type: select
     proxies:
