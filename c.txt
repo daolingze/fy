@@ -1,1 +1,78 @@
-1
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+proxies:
+  - {name: US-saas.sin.fan, server: saas.sin.fan, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+  - {name: US-store.ubi.com, server: store.ubi.com, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+  - {name: US-fbi.gov, server: fbi.gov, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+  - {name: US-cf.008500.xyz, server: cf.008500.xyz, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+  - {name: US-cf.090227.xyz, server: cf.090227.xyz, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+  - {name: US-cf.877774.xyz, server: cf.877774.xyz, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+  - {name: US-cdns.doon.eu.org, server: cdns.doon.eu.org, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+  - {name: US-sub.danfeng.eu.org, server: sub.danfeng.eu.org, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+  - {name: US-cf.zhetengsha.eu.org, server: cf.zhetengsha.eu.org, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+  - {name: "US-[2a06:98c1:52:42c5:47e3:c303:db13:e6fa]", server: 2a06:98c1:52:42c5:47e3:c303:db13:e6fa, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+  - {name: "US-[2606:4700:a0:d379:f41a:dd73:4c78:bcce]", server: 2606:4700:a0:d379:f41a:dd73:4c78:bcce, port: 443, type: vless, uuid: 6e7be4fd-d7e2-4f4e-8eb0-797dcd1713b0, tls: true, skip-cert-verify: true, servername: lwvp.jdh.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=ProxyIP.US.CMLiUSsss.net, headers: {Host: lwvp.jdh.dpdns.org}}}
+proxy-groups:
+  - name: 代理
+    type: select
+    proxies:
+      - DIRECT
+      - US-saas.sin.fan
+      - US-store.ubi.com
+      - US-fbi.gov
+      - US-cf.008500.xyz
+      - US-cf.090227.xyz
+      - US-cf.877774.xyz
+      - US-cdns.doon.eu.org
+      - US-sub.danfeng.eu.org
+      - US-cf.zhetengsha.eu.org
+      - US-[2a06:98c1:52:42c5:47e3:c303:db13:e6fa]
+      - US-[2606:4700:a0:d379:f41a:dd73:4c78:bcce]
+  - name: 规则外路由选择
+    type: select
+    proxies:
+      - 代理
+      - DIRECT
+rules:
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  - PROCESS-NAME,aria2c,DIRECT
+  - PROCESS-NAME,fdm,DIRECT
+  - PROCESS-NAME,Folx,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT
+  - PROCESS-NAME,Thunder,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent Helper,DIRECT
+  - PROCESS-NAME,DownloadService,DIRECT
+  - PROCESS-NAME,Weiyun,DIRECT
+  - DOMAIN-KEYWORD,aria2,DIRECT
+  - DOMAIN-KEYWORD,xunlei,DIRECT
+  - DOMAIN-KEYWORD,yunpan,DIRECT
+  - DOMAIN-KEYWORD,Thunder,DIRECT
+  - DOMAIN-KEYWORD,XLLiveUD,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,规则外路由选择
